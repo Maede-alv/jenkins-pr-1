@@ -1,0 +1,6 @@
+jenkins:
+  systemMessage: "Configured via JCasC!"
+  numExecutors: 2
+unclassified:
+  location:
+    url: http://localhost:8080/
