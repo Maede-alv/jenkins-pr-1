@@ -14,6 +14,7 @@ services:
       CASC_JENKINS_CONFIG: /var/jenkins_home/casc_configs/jenkins.yaml
     dns:
       - 8.8.8.8
+      - 1.1.1.1
 
   dind:
     image: docker:dind
