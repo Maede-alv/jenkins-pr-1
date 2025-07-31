@@ -8,6 +8,7 @@ services:
       - jenkins_home:/var/jenkins_home
       - ./casc_configs:/var/jenkins_home/casc_configs
       - ./plugins.txt:/usr/share/jenkins/ref/plugins.txt
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs/jenkins.yaml
       - USERNAME=${USERNAME}
