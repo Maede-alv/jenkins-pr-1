@@ -4,7 +4,6 @@ USER root
 
 RUN apt-get update && \
     apt-get install -y docker.io && \
-    groupadd -g 999 docker && \
     usermod -aG docker jenkins
 
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
