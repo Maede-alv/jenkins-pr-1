@@ -1,31 +1,16 @@
-version: '3.8'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    build: .
     user: root
     ports:
-      - "8080:8080"
-      - "50000:50000"
+      - "8083:8080"
+      - "50003:50000"
     volumes:
       - ./jcasc:/var/jenkins_home/casc_configs
       - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       CASC_JENKINS_CONFIG: /var/jenkins_home/casc_configs/jenkins.yaml
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
-
-  dind:
-    image: docker:dind
-    privileged: true
-    environment:
-      DOCKER_TLS_CERTDIR: ""
-    ports:
-      - "2375:2375"
-    volumes:
-      - dind_storage:/var/lib/docker
 
 volumes:
   jenkins_home:
-  dind_storage:
