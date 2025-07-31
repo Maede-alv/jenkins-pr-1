@@ -1,5 +1,8 @@
-workflow-aggregator
+workflow-aggregator:latest
 docker-workflow
 pipeline-model-definition
 pipeline-stage-step
 pipeline-stage-tags-metadata
+configuration-as-code:latest
+git:latest
+docker-plugin:latest
